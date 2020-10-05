@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/video_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:hint="@string/videoName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/duration"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/video_Name"
+        app:layout_constraintTop_toBottomOf="@+id/video_Name" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/video_Duration"
+        android:layout_width="281dp"
+        android:layout_height="27dp"
+
+        android:valueFrom="15"
+        android:valueTo="180"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/record_Video"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="160dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/recordVideo"
+        app:layout_constraintEnd_toEndOf="@+id/video_Duration"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/video_List"
+        android:layout_width="323dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="60dp"
+        android:windowSoftInputMode="adjustNothing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/record_Video" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
